@@ -29,14 +29,15 @@ int _printf(const char *format, ...)
 		}
 		if (format[i] == '%')
 		{
-			i++;
+			if (format[i + 1] == ' ' || format[i + 1] == '\0')
+				return (-1);
 
+			i++;
 			func_to_use = checkspec(format[i]);
 			if (func_to_use)
 			{
 				value = func_to_use(list, idx);
-				if (format[i] != '%' && format[i] != ' ' && format[i])
-					idx++;
+				idx++;
 				count += value;
 				i++;
 				continue;

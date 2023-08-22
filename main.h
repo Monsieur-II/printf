@@ -10,7 +10,6 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 void _puts(char *str);
 int print_rev(char *s);
-int blnk(va_list list, int idx);
 
 /**
  * struct func - struct containing string and function pointer

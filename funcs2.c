@@ -86,15 +86,3 @@ int print_rev(char *s)
 
 	return (n);
 }
-
-/**
- * blnk - prints percent sign
- * @list: the argument list
- * @idx: the index
- *
- * Return: no. of bytes written
- */
-int blnk(va_list list __attribute__((unused)), int idx __attribute__((unused)))
-{
-	return (-1);
-}
