@@ -8,7 +8,6 @@ The output will be written to the standard output stream (stdout).
 Valid Format Specifiers:
 
 %c: Prints a single character.
-%s: Prints a null-terminated string.
 %s specifier: Prints a string, terminated by a null character.
 %%: Prints a percent symbol.
 %d and %i: Print signed integers.
