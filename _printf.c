@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
 	int (*func_to_use)(va_list, int);
 
 	va_start(list, format);
-	if (!format)
+	if (format == NULL)
 		return (-1);
 	while (format[i])
 	{
@@ -34,6 +34,7 @@ int _printf(const char *format, ...)
 
 			i++;
 			func_to_use = checkspec(format[i]);
+
 			if (func_to_use)
 			{
 				value = func_to_use(list, idx);
@@ -42,6 +43,8 @@ int _printf(const char *format, ...)
 				i++;
 				continue;
 			}
+			else
+				return (-1);
 		}
 	}
 	va_end(list);
