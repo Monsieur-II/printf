@@ -18,7 +18,6 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 	if (!format)
 		return (-1);
-
 	while (format[i])
 	{
 		if (format[i] != '%')
@@ -31,11 +30,12 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
+
 			func_to_use = checkspec(format[i]);
 			if (func_to_use)
 			{
 				value = func_to_use(list, idx);
-				if (format[i] != '%')
+				if (format[i] != '%' && format[i] != ' ' && format[i])
 					idx++;
 				count += value;
 				i++;
