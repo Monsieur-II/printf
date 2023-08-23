@@ -30,7 +30,6 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == ' ' || format[i + 1] == '\0')
 				return (-1);
-
 			i++;
 			func_to_use = checkspec(format[i]);
 
@@ -44,6 +43,7 @@ int _printf(const char *format, ...)
 			else
 			{
 				_putchar('%');
+				count++;
 				continue;
 			}
 		}
