@@ -44,22 +44,21 @@ int printint(int d)
 		num_of_digits++;
 		temp /= 10;
 	}
-
 	size = num_of_digits + 1;
 	buffer = malloc(sizeof(char) * (size));
+	if (!buffer)
+		return (-1);
 	for (i = size - 2; i >= 0; i--)
 	{
 		buffer[i] = (num % 10) + '0';
 		num /= 10;
 	}
-
 	buffer[size - 1] = '\0';
 	if (f == 1)
 	{
 		_putchar('-');
 		num_of_digits++;
 	}
-
 	_puts(buffer);
 	free(buffer);
 
