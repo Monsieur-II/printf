@@ -104,3 +104,38 @@ int print_r(va_list list)
 
 	return (count);
 }
+
+/**
+ * print_rot - prints a rot13'd string from a list
+ * @list: the list
+ *
+ * Return: no. of bytes written
+ */
+int print_rot(va_list list)
+{
+	int i = 0;
+	char *s;
+
+	s = va_arg(list, char *);
+
+	while (s[i])
+	{
+		if (((s[i] >= 65) && (s[i] <= 77)) || ((s[i] >= 97) && (s[i] <= 109)))
+		{
+			_putchar(s[i] + 13);
+			i++;
+		}
+		else if (((s[i] >= 78) && (s[i] <= 90)) || ((s[i] >= 110) && (s[i] <= 122)))
+		{
+			_putchar(s[i] - 13);
+			i++;
+		}
+		else
+		{
+			_putchar(s[i]);
+			i++;
+		}
+	}
+
+	return (i);
+}
