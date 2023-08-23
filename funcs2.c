@@ -86,3 +86,21 @@ int print_rev(char *s)
 
 	return (n);
 }
+
+/**
+ * print_r - prints a string in reverse from a list
+ * @list: the list
+ *
+ * Return: no. of bytes written
+ */
+int print_r(va_list list)
+{
+	int count;
+	char *str;
+
+	str = va_arg(list, char *);
+
+	count = print_rev(str);
+
+	return (count);
+}
