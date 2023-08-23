@@ -15,9 +15,6 @@ int print_char(va_list list, int idx)
 	for (i = 0; i <= idx; i++)
 		c = va_arg(list, int);
 
-	if (!c)
-		return (1);
-
 	count = _putchar(c);
 	return (count);
 }

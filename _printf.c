@@ -11,7 +11,7 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0, count = 0, idx = 0, value;
+	int i = 0, count = 0, idx = 0;
 	va_list list;
 	int (*func_to_use)(va_list, int);
 
@@ -22,8 +22,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			value = _putchar(format[i]);
-			count += value;
+			count += _putchar(format[i]);
 			i++;
 			continue;
 		}
@@ -37,14 +36,16 @@ int _printf(const char *format, ...)
 
 			if (func_to_use)
 			{
-				value = func_to_use(list, idx);
+				count += func_to_use(list, idx);
 				idx++;
-				count += value;
 				i++;
 				continue;
 			}
 			else
-				return (-1);
+			{
+				_putchar('%');
+				continue;
+			}
 		}
 	}
 	va_end(list);
