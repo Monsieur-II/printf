@@ -3,17 +3,15 @@
 /**
  * print_char - prints a char
  * @list: the list from which to print char
- * @idx: the index of the char
  *
  * Return: the number of bytes written
  */
-int print_char(va_list list, int idx)
+int print_char(va_list list)
 {
-	int i, count;
+	int count;
 	char c;
 
-	for (i = 0; i <= idx; i++)
-		c = va_arg(list, int);
+	c = va_arg(list, int);
 
 	count = _putchar(c);
 	return (count);
@@ -22,17 +20,13 @@ int print_char(va_list list, int idx)
 /**
  * print_str - prints a string from a list
  * @list: the list
- * @idx: the index of the string in list
  *
  * Return: no. of bytes written
  */
-int print_str(va_list list, int idx)
+int print_str(va_list list)
 {
-	int i, count = 0;
+	int count = 0;
 	char *str;
-
-	for (i = 0; i < idx; i++)
-		va_arg(list, char *);
 
 	str = va_arg(list, char *);
 	if (str == NULL)
@@ -52,17 +46,15 @@ int print_str(va_list list, int idx)
 /**
  * print_int - prints decimal integer
  * @list: the list to print from
- * @idx: the index of the argument
  *
  * Return: the no. of bytes written
  */
-int print_int(va_list list, int idx)
+int print_int(va_list list)
 {
-	int i, count;
+	int count;
 	int num;
 
-	for (i = 0; i <= idx; i++)
-		num = va_arg(list, int);
+	num = va_arg(list, int);
 
 	count = printint(num);
 
@@ -72,11 +64,10 @@ int print_int(va_list list, int idx)
 /**
  * cent - prints percent sign
  * @list: the argument list
- * @idx: the index
  *
  * Return: no. of bytes written
  */
-int cent(va_list list __attribute__((unused)), int idx __attribute__((unused)))
+int cent(va_list list __attribute__((unused)))
 {
 	int count;
 
@@ -88,18 +79,16 @@ int cent(va_list list __attribute__((unused)), int idx __attribute__((unused)))
 /**
  * print_binary - prints unsigned int in binary
  * @list: the list to print from
- * @idx: the index of the argument
  *
  * Return: the no. of bytes written
  */
-int print_binary(va_list list, int idx)
+int print_binary(va_list list)
 {
-	int count = 0, i, j = 0;
+	int count = 0, j = 0;
 	unsigned int num;
 	char arr[64];
 
-	for (i = 0; i <= idx; i++)
-		num = va_arg(list, int);
+	num = va_arg(list, int);
 
 	if (num == 0)
 		return (_putchar('0'));

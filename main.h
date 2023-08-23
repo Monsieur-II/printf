@@ -19,14 +19,14 @@ int print_rev(char *s);
 typedef struct func
 {
 	char *t;
-	int (*f)(va_list, int);
+	int (*f)(va_list);
 } func_t;
-int (*checkspec(char s))(va_list, int);
-int print_char(va_list list, int idx);
-int print_str(va_list list, int idx);
-int print_int(va_list list, int idx);
+int (*checkspec(char s))(va_list);
+int print_char(va_list list);
+int print_str(va_list list);
+int print_int(va_list list);
 int printint(int d);
-int cent(va_list list, int idx);
-int print_binary(va_list list, int idx);
+int cent(va_list list);
+int print_binary(va_list list);
 
 #endif /*MAIN_HEADER*/

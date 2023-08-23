@@ -11,9 +11,9 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0, count = 0, idx = 0;
+	int i = 0, count = 0;
 	va_list list;
-	int (*func_to_use)(va_list, int);
+	int (*func_to_use)(va_list);
 
 	va_start(list, format);
 	if (format == NULL)
@@ -35,8 +35,7 @@ int _printf(const char *format, ...)
 
 			if (func_to_use)
 			{
-				count += func_to_use(list, idx);
-				idx++;
+				count += func_to_use(list);
 				i++;
 				continue;
 			}

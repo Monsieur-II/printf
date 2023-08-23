@@ -6,7 +6,7 @@
  *
  * Return: the function to use
  */
-int (*checkspec(char s))(va_list, int)
+int (*checkspec(char s))(va_list)
 {
 	int i;
 	func_t arr[] = {
