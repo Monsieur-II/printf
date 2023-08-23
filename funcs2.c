@@ -28,6 +28,7 @@ int printint(int d)
 	int temp = d, size;
 	int num_of_digits = 0;
 	int i, f = 0;
+	unsigned int num;
 
 	if (d == 0)
 		return (_putchar('0'));
@@ -37,7 +38,7 @@ int printint(int d)
 		f = 1;
 		d *= -1;
 	}
-
+	num = d;
 	while (temp != 0)
 	{
 		num_of_digits++;
@@ -48,8 +49,8 @@ int printint(int d)
 	buffer = malloc(sizeof(char) * (size));
 	for (i = size - 2; i >= 0; i--)
 	{
-		buffer[i] = (d % 10) + '0';
-		d /= 10;
+		buffer[i] = (num % 10) + '0';
+		num /= 10;
 	}
 
 	buffer[size - 1] = '\0';
