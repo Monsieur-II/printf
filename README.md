@@ -12,7 +12,7 @@ VALID FORMAT SPECIFIERS:
 %%: Prints a percent symbol.
 %d and %i: Print signed integers.
 
-Prototype:
+PROTOTYPE:
 int _printf(const char *format, ...);
 
 NOTE:
