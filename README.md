@@ -13,6 +13,7 @@ VALID FORMAT SPECIFIERS:
 %d and %i: Print signed integers.
 
 PROTOTYPE:
+
 int _printf(const char *format, ...);
 
 NOTE:
