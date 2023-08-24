@@ -16,6 +16,11 @@ PROTOTYPE:
 
 int _printf(const char *format, ...);
 
+RETURN VALUE:
+
+The _printf function will return the count of characters that were printed,
+excluding the null byte used for terminating output to strings.
+
 NOTE:
 
 The custom printf function is designed to focus solely on the core functionality of printing formatted output.
