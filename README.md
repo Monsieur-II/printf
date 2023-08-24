@@ -12,6 +12,9 @@ VALID FORMAT SPECIFIERS:
 %%: Prints a percent symbol.
 %d and %i: Print signed integers.
 
+Prototype:
+int _printf(const char *format, ...);
+
 NOTE:
 
 The custom printf function is designed to focus solely on the core functionality of printing formatted output.
