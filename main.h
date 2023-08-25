@@ -10,6 +10,7 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 void _puts(char *str);
 int print_rev(char *s);
+void print_hex(char num);
 
 /**
  * struct func - struct containing string and function pointer
@@ -31,5 +32,6 @@ int cent(va_list list);
 int print_binary(va_list list);
 int print_r(va_list list);
 int print_rot(va_list list);
+int print_S(va_list list);
 
 #endif /*MAIN_HEADER*/
