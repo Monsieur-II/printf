@@ -86,3 +86,39 @@ int print_uint(va_list list)
 
 	return (count);
 }
+
+/**
+ * print_x - prints hexidecimal integer
+ * @list: the list to print from
+ *
+ * Return: the no. of bytes written
+ */
+int print_x(va_list list)
+{
+	int count;
+	int num;
+
+	num = va_arg(list, unsigned int);
+
+	count = print_uhex(num);
+
+	return (count);
+}
+
+/**
+ * print_X - prints hexidecimal integer
+ * @list: the list to print from
+ *
+ * Return: the no. of bytes written
+ */
+int print_X(va_list list)
+{
+	int count;
+	int num;
+
+	num = va_arg(list, unsigned int);
+
+	count = print_uheX(num);
+
+	return (count);
+}
