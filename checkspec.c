@@ -19,6 +19,8 @@ int (*checkspec(char s))(va_list)
 		{"r", print_r},
 		{"R", print_rot},
 		{"S", print_S},
+		{"o", print_o},
+		{"u", print_uint},
 		{NULL, NULL}};
 
 	for (i = 0; arr[i].t != NULL; i++)

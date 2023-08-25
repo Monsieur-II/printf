@@ -33,5 +33,7 @@ int print_binary(va_list list);
 int print_r(va_list list);
 int print_rot(va_list list);
 int print_S(va_list list);
+int print_o(va_list list);
+int print_uint(va_list list);
 
 #endif /*MAIN_HEADER*/
