@@ -16,6 +16,23 @@ PROTOTYPE:
 
 int _printf(const char *format, ...);
 
+TEST CODE:
+
+#include "alx.h"
+
+int main(void)
+{
+    int len;
+
+    len = _printf("Hello, %s!\n", "world");
+    _printf("The number of characters printed is: %d\n", len);
+
+    _printf("%c\n", 'A');
+    _printf("%%\n");
+    
+    return (0);
+}
+
 RETURN VALUE:
 
 The _printf function will return the count of characters that were printed,
