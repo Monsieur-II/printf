@@ -18,6 +18,12 @@ int (*checkspec(char s))(va_list)
 		{"b", print_binary},
 		{"r", print_r},
 		{"R", print_rot},
+		{"S", print_S},
+		{"o", print_o},
+		{"u", print_uint},
+		{"x", print_x},
+		{"X", print_X},
+		{"p", print_p},
 		{NULL, NULL}};
 
 	for (i = 0; arr[i].t != NULL; i++)

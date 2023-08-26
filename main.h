@@ -7,9 +7,13 @@
 #include <string.h>
 
 int _printf(const char *format, ...);
+int _strlen(char *s);
 int _putchar(char c);
 void _puts(char *str);
 int print_rev(char *s);
+void print_hex(char num);
+int print_uhex(unsigned int num);
+int print_uheX(unsigned int num);
 
 /**
  * struct func - struct containing string and function pointer
@@ -31,5 +35,11 @@ int cent(va_list list);
 int print_binary(va_list list);
 int print_r(va_list list);
 int print_rot(va_list list);
+int print_S(va_list list);
+int print_o(va_list list);
+int print_uint(va_list list);
+int print_x(va_list list);
+int print_X(va_list list);
+int print_p(va_list list);
 
 #endif /*MAIN_HEADER*/
