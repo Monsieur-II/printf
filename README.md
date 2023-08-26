@@ -40,9 +40,10 @@ excluding the null byte used for terminating output to strings.
 
 GUIDANCE:
 
-1. Clone the repository from GitHub: printf.
-2. Implement the custom _printf function in the provided source files. It is necessary to handle the specified conversion specifiers: %c, %s, %%, %d, and %i.
-3. Test the implementation using various test cases to ensure accuracy and correctness.
+1. Begin by cloning the repository from GitHub: printf.
+2. Proceed to implement the custom _printf function in the provided source files.
+It is imperative to properly handle the specified conversion specifiers, namely: %c, %s, %%, %d, and %i.
+3. Thoroughly test the implementation using a diverse range of test cases to ensure utmost accuracy and correctness.
 
 NOTE:
 
