@@ -38,6 +38,12 @@ RETURN VALUE:
 The _printf function will return the count of characters that were printed,
 excluding the null byte used for terminating output to strings.
 
+Instructions:
+
+1. Clone the repository from GitHub: printf.
+2. Implement the custom _printf function in the provided source files. It is necessary to handle the specified conversion specifiers: %c, %s, %%, %d, and %i.
+3. Test the implementation using various test cases to ensure accuracy and correctness.
+
 NOTE:
 
 The custom printf function is designed to focus solely on the core functionality of printing formatted output.
